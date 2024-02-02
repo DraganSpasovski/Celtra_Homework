@@ -21,7 +21,6 @@ exports.config = {
       browser: 'chromium',
       windowSize: '1920x1080',
       waitForNavigation: 'domcontentloaded'
-
     }
   },
   multiple: {
