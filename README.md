@@ -7,7 +7,7 @@ For the "Extra points", I came up with the following solutions
 
 A. How would you make the test script browser independent?
 
-  - I edited the codecept.conf.js file to include profiles which are using different browsers. Run - "npx codeceptjs run-multiple <broswer>"
+  - I edited the codecept.conf.js file to include profiles which are using different browsers. Run - "npx codeceptjs run-multiple <Choose broswer>"
 
 B. How would you execute the test in parallel on multiple browsers?
 
