@@ -6,7 +6,10 @@ Scenario('test something', ({ I, locatorsPage }) => {
     
     I.waitForElement(locatorsPage.objects.bigDaddyIframe1,20)
 
+    locatorsPage.verifyPhoneDiv()
+
     within({frame: locatorsPage.objects.bigDaddyIframe1}, () => {
+        
     
         I.waitForElement(locatorsPage.objects.bigDaddyIframe2,20)
         I.switchTo(locatorsPage.objects.bigDaddyIframe2)
