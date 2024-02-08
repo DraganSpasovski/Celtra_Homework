@@ -223,7 +223,7 @@ module.exports =  {
                 'position': 'absolute',
                 'top': '0px',
                 'right': '0px',
-                //'z-index': '99999999'
+                'z-index': '99999999'
 
             })
         
