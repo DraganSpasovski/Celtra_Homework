@@ -11,7 +11,7 @@ Scenario('test something', ({ I, locatorsPage }) => {
     within({frame: locatorsPage.objects.bigDaddyIframe1}, () => {
         
     
-        I.waitForElement(locatorsPage.objects.bigDaddyIframe2,20)
+        I.waitForElement(locatorsPage.objects.bigDaddyIframe2, 20)
         I.switchTo(locatorsPage.objects.bigDaddyIframe2)
         locatorsPage.verifyExpandable()
         I.click(locatorsPage.objects.ExpandableButtonDiv)
@@ -20,7 +20,7 @@ Scenario('test something', ({ I, locatorsPage }) => {
 
     within({frame:locatorsPage.objects.bigDaddyIframe1}, () => {
 
-        I.waitForElement(locatorsPage.objects.bigDaddyIframe3,20)
+        I.waitForElement(locatorsPage.objects.bigDaddyIframe3, 20)
         I.switchTo(locatorsPage.objects.bigDaddyIframe3)
         locatorsPage.verifyModalUnit()
         I.click(locatorsPage.objects.ClickableLogoDiv)
