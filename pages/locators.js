@@ -12,24 +12,27 @@ module.exports =  {
 
       phoneDiv: '//div[@data-field="device"]',
         
-      ExpandableBackgroundBlueDiv: '//div[@id="celtra-object-75"]',
+      ExpandableBannerDiv: 'div#celtra-banner',
+      ExpandableBackgroundBlueDiv: 'div#celtra-object-75',
       ExpandableBackgroundBlue: '//*[@id="celtra-object-75"]/div',
-      ExpandableBackgroundGreenDiv: '//div[@id="celtra-object-69"]',
+      ExpandableBackgroundGreenDiv: 'div#celtra-object-69',
       ExpandableBackgroundGreen: '//*[@id="celtra-object-69"]/div',
-      ExpandableTextDiv: '#celtra-object-76',
+      ExpandableTextDiv: 'div#celtra-object-76',
       ExpandableText: '//*[@id="celtra-object-76"]/div/div[1]',
       ExpandableButtonDiv: 'div#celtra-object-104',
      
-      ExpandableCeltraLogoDiv: '#celtra-object-77',
+      ExpandableCeltraLogoDiv: 'div#celtra-object-77',
       ExpandableCeltraLogo: '//*[@id="celtra-object-77"]/div',
 
  
       ModalUnitBackgroundGrayDiv: 'div#celtra-modal',
+      ModalUnitBackgroundBlueDiv: 'div#celtra-object-37',
       ModalUnitBackgroundBlue: '//*[@id="celtra-object-37"]/div',
+      ModalUnitBackgroundGreenDiv: 'div#celtra-object-36',
       ModalUnitBackgroundGreen: '//*[@id="celtra-object-36"]/div',
       ModalUnitText: '//*[@id="celtra-object-38"]/div/div[1]',
  
-      ClickableLogoDiv: '#celtra-object-41',
+      ClickableLogoDiv: 'div#celtra-object-41',
       CeltraLogoModalUnit: '//*[@id="celtra-object-41"]/div',
 
       CloseButtonModalUnit: '//*[@class="celtra-close-button touchable celtra-close-button-up"]'
@@ -37,7 +40,20 @@ module.exports =  {
 
     
     verifyExpandable()
-    {
+    {   
+        I.seeElement(this.objects.ExpandableBannerDiv)
+        I.seeCssPropertiesOnElements(this.objects.ExpandableBannerDiv,
+            {
+
+                'background-color': 'rgb(153, 153, 153)',
+                'position': 'absolute',
+                'width': '320px',
+                'height': '50px',
+                'margin-left': '-160px',
+                'margin-top': '-25px'
+
+            })
+        I.seeElement(this.objects.ExpandableBackgroundBlueDiv)    
         I.seeCssPropertiesOnElements(this.objects.ExpandableBackgroundBlueDiv,
             {
 
@@ -66,7 +82,7 @@ module.exports =  {
                 'display':'block'
 
             })
-
+        I.seeElement(this.objects.ExpandableBackgroundGreenDiv)
         I.seeCssPropertiesOnElements(this.objects.ExpandableBackgroundGreenDiv,
             {
 
@@ -96,6 +112,7 @@ module.exports =  {
             
             })
         
+        I.seeElement(this.objects.ExpandableTextDiv)
         I.seeCssPropertiesOnElements(this.objects.ExpandableTextDiv,
             {
 
@@ -132,7 +149,7 @@ module.exports =  {
                 'height': '40px',
                 'z-index': '10006',
                 'opacity': '1',
-                
+
             })
 
         I.seeElement(this.objects.ExpandableCeltraLogo)
@@ -143,38 +160,73 @@ module.exports =  {
             
             })
 
-        I.see('Expandable', this.objects.ExpandableText)
     },
 
     verifyModalUnit()
     {
+
+        I.seeElement(this.objects.ModalUnitBackgroundGrayDiv)
         I.seeCssPropertiesOnElements(this.objects.ModalUnitBackgroundGrayDiv, 
             {
 
                 'background-color': 'rgb(102, 102, 102)'
             
             })
+
+        I.seeElement(this.objects.ModalUnitBackgroundGreenDiv)
+        I.seeCssPropertiesOnElements(this.objects.ModalUnitBackgroundGreenDiv,
+            {
+
+                'position': 'absolute',
+                'left': '0px',
+                'top': '0px',
+                'width': '320px',
+                'height': '372px',
+                'z-index': '10001',
+                'opacity': '1',
+
+            })
         I.seeElement(this.objects.ModalUnitBackgroundGreen)
         I.seeCssPropertiesOnElements(this.objects.ModalUnitBackgroundGreen,
             {
 
                 'background-color': 'rgb(0, 153, 153)',
-                'display':'block'
 
             })
 
 
+        I.seeElement(this.objects.ModalUnitBackgroundBlueDiv)
+        I.seeCssPropertiesOnElements(this.objects.ModalUnitBackgroundBlueDiv,
+            {
+
+                'position': 'absolute',
+                'left': '5px',
+                'top': '5px',
+                'width': '310px',
+                'height': '362px',
+                'z-index': '10002',
+                'opacity': '1',
+    
+            })    
         I.seeElement(this.objects.ModalUnitBackgroundBlue)
         I.seeCssPropertiesOnElements(this.objects.ModalUnitBackgroundBlue,
             {
 
                 'background-color': 'rgb(0, 0, 204)',
-                'display':'block'
 
             })
         
         I.seeElement(this.objects.CloseButtonModalUnit)
+        I.seeCssPropertiesOnElements(this.objects.CloseButtonModalUnit,
+            {
 
+                'position': 'absolute',
+                'top': '0px',
+                'right': '0px',
+                //'z-index': '99999999'
+
+            })
+        
         I.see('Modal Unit', this.objects.ModalUnitText)
         I.seeCssPropertiesOnElements(this.objects.ModalUnitText,
             {
@@ -189,6 +241,19 @@ module.exports =  {
             })
 
         I.seeElement(this.objects.ClickableLogoDiv)
+        I.seeCssPropertiesOnElements(this.objects.ClickableLogoDiv,
+            {
+
+                'position': 'absolute',
+                'left': '115px',
+                'top': '327px',
+                'width': '90px',
+                'height': '40px',
+                'z-index': '10004',
+                'opacity': '1'
+
+            })
+
         I.seeElement(this.objects.CeltraLogoModalUnit)
         I.seeCssPropertiesOnElements(this.objects.CeltraLogoModalUnit,
             {
@@ -201,6 +266,7 @@ module.exports =  {
 
     verifyPhoneDiv()
     {
+        
         I.seeCssPropertiesOnElements(this.objects.phoneDiv,
             {
 

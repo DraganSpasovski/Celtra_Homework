@@ -4,8 +4,9 @@ Scenario('test something', ({ I, locatorsPage }) => {
 
     I.amOnPage('https://test.celtra.com/preview/f576e12f#overrides.deviceInfo.deviceType=Phone')
     
+    I.waitForElement(locatorsPage.objects.phoneDiv,20)
     I.waitForElement(locatorsPage.objects.bigDaddyIframe1,20)
-
+    
     locatorsPage.verifyPhoneDiv()
 
     within({frame: locatorsPage.objects.bigDaddyIframe1}, () => {
