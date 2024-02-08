@@ -1,6 +1,6 @@
 Feature('expandable');
 
-Scenario('test something', ({ I, locatorsPage }) => {
+Scenario('Celtra_tests', ({ I, locatorsPage }) => {
 
     I.amOnPage('https://test.celtra.com/preview/f576e12f#overrides.deviceInfo.deviceType=Phone')
     
